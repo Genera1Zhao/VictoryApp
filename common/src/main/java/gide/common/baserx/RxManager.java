@@ -5,4 +5,5 @@ package gide.common.baserx;
  */
 
 public class RxManager {
+    public RxBus mRxBus;
 }

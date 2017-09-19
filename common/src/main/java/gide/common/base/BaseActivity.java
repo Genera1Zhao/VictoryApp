@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
 import gide.common.baserx.RxManager;
+import gide.common.commonutils.TUtil;
 
 /**
  * Created by zhaofuqi on 2017/9/19.
@@ -30,6 +31,11 @@ public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel>
         setContentView(getLayoutId());
         ButterKnife.bind(this);
         mContext = this;
+        mPresenter = TUtil.getT(this, 0);
+        mModel = TUtil.getT(this, 1);
+        if (mPresenter != null) {
+
+        }
 
     }
 
